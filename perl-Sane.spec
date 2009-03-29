@@ -13,7 +13,7 @@ Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
 Url:        http://search.cpan.org/dist/%{realname}
 BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires: perl-devel perl(ExtUtils::Depends)
-BuildRequires: sane-devel
+BuildRequires: sane-devel perl(ExtUtils::PkgConfig)
 %description
 The Sane module allows a Perl developer to use SANE-compatible scanners.
 Find out more about SANE at the http://www.sane-project.org manpage.
