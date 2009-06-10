@@ -1,32 +1,28 @@
+%define upstream_name       Sane
+%define upstream_version    0.03
 
-%define realname   Sane
-%define version    0.02
-%define release    %mkrel 1
-
-Name:       perl-%{realname}
-Version:    %{version}
-Release:    %{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
 License:    GPL or Artistic
 Group:      Development/Perl
 Summary:    Perl extension for the SANE (Scanner Access Now Easy) Project
-Source:     http://www.cpan.org/modules/by-module//%{realname}-%{version}.tar.gz
-Url:        http://search.cpan.org/dist/%{realname}
-BuildRoot:  %{_tmppath}/%{name}-%{version}-%{release}-buildroot
-BuildRequires: perl-devel perl(ExtUtils::Depends)
-BuildRequires: sane-devel perl(ExtUtils::PkgConfig)
+Source:     http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{upstream_version}.tar.gz
+Url:        http://search.cpan.org/dist/%{upstream_name}
+BuildRequires: perl-devel
+BuildRequires: sane-devel
+BuildRequires: perl(ExtUtils::Depends)
+BuildRequires: perl(ExtUtils::PkgConfig)
+BuildRoot:  %{_tmppath}/%{name}-%{version}
+
 %description
-The Sane module allows a Perl developer to use SANE-compatible scanners.
-Find out more about SANE at the http://www.sane-project.org manpage.
-
-Most methods set $Sane::STATUS, which is overloaded to give either an
-integer as dictated by the SANE standard, or the the corresponding message,
-as required.
-
-Sane->get_version
-    Returns an array with the SANE_VERSION_(MAJOR|MINOR|BUILD) versions:
+Perl bindings for the SANE (Scanner Access Now Easy) Project. This module
+allows you to access SANE-compatible scanners in a Perlish and object-oriented
+way, freeing you from the casting and memory management in C, yet remaining
+very close in spirit to original API.
 
 %prep
-%setup -q -n %{realname}-%{version} 
+%setup -q -n %{upstream_name}-%{upstream_version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -47,5 +43,3 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
