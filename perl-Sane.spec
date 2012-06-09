@@ -1,19 +1,18 @@
 %define upstream_name       Sane
-%define upstream_version    0.03
+%define upstream_version    0.05
 
-Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	2
-License:    GPL or Artistic
-Group:      Development/Perl
-Summary:    Perl extension for the SANE (Scanner Access Now Easy) Project
-Source:     http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{upstream_version}.tar.gz
-Url:        http://search.cpan.org/dist/%{upstream_name}
-BuildRequires: perl-devel
-BuildRequires: sane-devel
-BuildRequires: perl(ExtUtils::Depends)
-BuildRequires: perl(ExtUtils::PkgConfig)
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+Name:		perl-%{upstream_name}
+Version:	%perl_convert_version %{upstream_version}
+Release:	1
+License:	GPL or Artistic
+Group:		Development/Perl
+Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+BuildRequires:	perl-devel
+BuildRequires:	sane-devel
+BuildRequires:	perl(ExtUtils::Depends)
+BuildRequires:	perl(ExtUtils::PkgConfig)
 
 %description
 Perl bindings for the SANE (Scanner Access Now Easy) Project. This module
