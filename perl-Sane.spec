@@ -42,3 +42,28 @@ rm -rf %buildroot
 %doc Changes README
 %{_mandir}/man3/*
 %perl_vendorlib/*
+
+
+%changelog
+* Sat Jun 09 2012 Bernhard Rosenkraenzer <bero@bero.eu> 0.50.0-1
++ Revision: 803900
+- Update to 0.05
+
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 0.30.0-2
++ Revision: 768358
+- mass rebuild of perl extensions against perl 5.14.2
+
+* Wed Jun 10 2009 Guillaume Rousse <guillomovitch@mandriva.org> 0.30.0-1mdv2010.0
++ Revision: 384784
+- new version
+
+* Mon Mar 30 2009 Michael Scherer <misc@mandriva.org> 0.02-1mdv2009.1
++ Revision: 362223
+- fix BuildRequires
+- fix missing BuildRequires
+- import perl-Sane
+
+
+* Mon Mar 30 2009 cpan2dist 0.02-1mdv
+- initial mdv release, generated with cpan2dist
+
