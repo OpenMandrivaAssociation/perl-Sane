@@ -33,7 +33,7 @@ very close in spirit to original API.
 %files
 %doc Changes README
 %{_mandir}/man3/*
-%perl_vendorlib/*
+%perl_vendorarch/*
 
 
 %changelog
