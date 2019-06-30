@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Release:	5
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
@@ -25,13 +25,10 @@ very close in spirit to original API.
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
-%make
-
-%check
-make test
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc Changes README
