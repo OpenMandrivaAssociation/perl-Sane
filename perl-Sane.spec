@@ -8,7 +8,7 @@ License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
 Source0:	http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{upstream_version}.tar.gz
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 BuildRequires:	perl-devel
 BuildRequires:	sane-devel
 BuildRequires:	perl(ExtUtils::Depends)
