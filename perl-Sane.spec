@@ -1,13 +1,11 @@
 %define upstream_name Sane
-%define upstream_version 0.05
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.05
+Release:	7
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
-Source0:	http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{upstream_version}.tar.gz
+Source0:	http://search.cpan.org/CPAN/authors/id/R/RA/RATCLIFFE/%{upstream_name}-%{version}.tar.gz
 Url:		https://metacpan.org/dist/Sane
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ way, freeing you from the casting and memory management in C, yet remaining
 very close in spirit to original API.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version} 
+%setup -q -n %{upstream_name}-%{version} 
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
