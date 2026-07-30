@@ -1,7 +1,7 @@
 %define upstream_name Sane
 Name:		perl-%{upstream_name}
 Version:	0.05
-Release:	1
+Release:	2
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
@@ -23,7 +23,7 @@ very close in spirit to original API.
 %setup -q -n Sane-0.05 
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
+perl Makefile.PL INSTALLDIRS=vendor
 %make_build
 
 %install
