@@ -1,8 +1,8 @@
 %define upstream_name Sane
 %define upstream_version 0.05
 Name:		perl-%{upstream_name}
-Version:	0.05
-Release:	3
+Version:	0.99
+Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
 Summary:	Perl extension for the SANE (Scanner Access Now Easy) Project
