@@ -1,7 +1,7 @@
 %define upstream_name Sane
 %define upstream_version 0.05
 Name:		perl-%{upstream_name}
-Version:	0.99
+Version:	0.05
 Release:	1
 License:	GPL or Artistic
 Group:		Development/Perl
@@ -21,7 +21,7 @@ way, freeing you from the casting and memory management in C, yet remaining
 very close in spirit to original API.
 
 %prep
-%setup -q -n Sane-0.05 
+%setup -q -n Sane-0.05
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -29,6 +29,9 @@ perl Makefile.PL INSTALLDIRS=vendor
 
 %install
 %make_install
+
+%check
+make test || :
 
 %files
 %doc Changes README
